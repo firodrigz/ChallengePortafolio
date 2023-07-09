@@ -59,48 +59,81 @@ body{
 }
 
 
-@media screen and (max-width: 480px) {
-   
-    #menu__button{
-        display: block;
-        cursor: pointer;  
-    }
-    
-    /*TODO transición */
-
-    .menu__header__nav{
-        width: 100%;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background: rgba(0, 0, 0, 0.9);
-        display: none;
-        pointer-events: none;
-    }
-
-    .menu__header__nav.activo{
-        display: block;
-        height: 100vh;
-        pointer-events: auto;
-    }
-
-    .menu__list{
-        flex-direction: column;
-    }
-
-    .menu__list__item{
-        margin: 1.2rem 0 1.2rem 0;
-    }
-    
-}
 
 /*Sección Title*/
 
-section{
-    padding: 10rem 10%;
+.home{
     min-height: 100vh;
+    padding: 10rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*background: linear-gradient(-90deg, var(--background) 65%, var(--color-leta-blnc) 35% );*/
 }
 
+.home__content{
+    max-width: 37.5rem;
+}
+
+.title__bio{
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.title__subsection{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #00ABF0;
+}
+
+.home__content p{
+    font-size: 1rem;
+    margin: 1.25rem 0 2.5rem;
+}
+
+.home__btn__box{
+    display: flex;
+    justify-content: space-between;
+    width: 21.5625rem;
+    height: 3.125rem;
+}
+
+.home__btn__box a{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 9.375rem;
+    height: 100%;
+    background: #00ABF0;
+    border: 2px solid #00ABF0;
+    border-radius: 8px;
+    font-size: 1.1875rem;
+    color: #0B141E;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+/*
+section{
+    
+
+
+    .home__image {
+    width: 500px;
+    height: 500px;
+    background: seagreen;
+}
+
+.title__profile{    
+    border-radius: 50%;
+}
+
+
+    
+}*/
 /*Sección About*/
 
 section.about{
@@ -180,5 +213,45 @@ Utiliza las referencias de los breakpoints @media abajo */
  /*Contacto*/
 
 /*Footer*/
+
+}
+
+
+@media screen and (max-width: 480px) {
+   
+    #menu__button{
+        display: block;
+        cursor: pointer;  
+    }
+    
+    /*TODO transición */
+
+    .menu__header__nav{
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+        pointer-events: none;
+    }
+
+    .menu__header__nav.activo{
+        display: block;
+        height: 100vh;
+        pointer-events: auto;
+    }
+
+    .menu__list{
+        flex-direction: column;
+    }
+
+    .menu__list__item{
+        margin: 1.2rem 0 1.2rem 0;
+    }
+    
+    .title__div{
+        flex-direction: column;
+    }
 
 }
