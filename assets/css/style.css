@@ -63,12 +63,31 @@ body{
 /*Sección Title*/
 
 .home{
+
     min-height: 100vh;
-    padding: 10rem 10%;
+    /*padding: 10rem 10%;*/
+    padding: 0 10%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     /*background: linear-gradient(-90deg, var(--background) 65%, var(--color-leta-blnc) 35% );*/
+}
+
+
+.home__image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+    border-radius: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 25px solid #FFFFFF;
+    background-image: url('../img/profile.jpg');
+    outline: 25px solid #081B29;
 }
 
 .home__content{
@@ -99,7 +118,7 @@ body{
     height: 3.125rem;
 }
 
-.home__btn__box a{
+.home__btn__item{
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -113,6 +132,92 @@ body{
     color: #0B141E;
     font-weight: 600;
     letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home__btn__item:hover{
+    color: #00ABF0;
+}
+
+/* cambia 2do botón */
+
+.home__btn__item:nth-child(2){
+    background: transparent;
+    color: #00ABF0;
+}
+
+.home__btn__item:nth-child(2):hover{
+    color: #081B29;
+}
+
+.home__btn__item:nth-child(2)::before{
+    background: #00ABF0;
+}
+
+/* Efecto cortina */
+
+.home__btn__item::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081B29;
+    z-index: -1;
+    transition: .5s;
+}
+
+
+.home__btn__item:hover::before{
+    width: 100%;
+}
+
+/*        */
+
+
+.home__sci{
+    position: absolute;
+    bottom: 2.5rem;
+    width: 9rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.home__sci__item{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: 2px solid #00ABF0;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    color: #00ABF0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Efecto cortina */
+
+.home__sci__item::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: red;
+    z-index: -1;
+    transition: .5s; 
+}
+
+.home__sci__item:hover::before{
+    height: 100%;
 }
 
 
