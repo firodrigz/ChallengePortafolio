@@ -1,7 +1,16 @@
 :root{
-    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
-   --background: #0B141E;
+   
+    --background: #0B141E;
    --color-leta-blnc: #FFFFFF;
+
+   /* --color-letra:
+      --color-outline:
+
+
+
+      darkmode:
+
+    */  
 
    --fuente: 'Poppins', sans-serif;
 }
@@ -12,9 +21,15 @@ body{
     color: var(--color-leta-blnc) ;
 }
 
+section{
+    min-height: 100vh;
+    padding: 10rem 10%;
+}
+
+
 /*Sección Menu*/
 
-/*No funciona: color de letra, transiciones */
+/*No funciona: transiciones */
 
 .menu__header{ 
     background: rgba(0, 0, 0, 0.9); /*poner variable color */
@@ -59,14 +74,9 @@ body{
 }
 
 
-
-/*Sección Title*/
+/*Sección Home*/
 
 .home{
-
-    min-height: 100vh;
-    /*padding: 10rem 10%;*/
-    padding: 0 10%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -220,106 +230,6 @@ body{
     height: 100%;
 }
 
-
-/*
-section{
-    
-
-
-    .home__image {
-    width: 500px;
-    height: 500px;
-    background: seagreen;
-}
-
-.title__profile{    
-    border-radius: 50%;
-}
-
-
-    
-}*/
-/*Sección About*/
-
-section.about{
-
-}
-
-/*Sección Hobbies*/
-
-section.hobbies{
-    
-}
-
-/* Experiencia Académica*/
-
-section.academic{
-
-}
-
-/* experiencia*/
-
-section.experience{
-
-}
-
-/*Contacto*/
-
-section.formcontato{
-
-}
-
-/*footeer*/
-
-section.footer{
-   
-}
-
-/* Vamos a desafiarnos trabajando con responsividad?
-Utiliza las referencias de los breakpoints @media abajo */
-
-
-/*Tablet*/
-@media (min-width: 768px) {
-
-/* Menú */
-
-/*title*/
-
-/*Skills*/
-
-/*Hobbies*/
-
-/*Formación Académica*/
-
-/*Experiencia Profesional*/
-
-}
-
-/*Mobile*/
-@media (min-width: 425px) {
-
-/*Menu*/
-
-
-
-/*Titulo*/
-
-/*Sección sobre mi*/
-
-/*Skills*/
-
-/*Hobbies*/
- 
-/*Formación Académica*/
-
-/*Experiencia Profesional*/
-
- /*Contacto*/
-
-/*Footer*/
-
-}
 
 
 @media screen and (max-width: 480px) {
