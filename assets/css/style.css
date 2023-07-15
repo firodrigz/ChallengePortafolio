@@ -187,7 +187,6 @@ section{
 
 /*        */
 
-
 .home__sci{
     position: absolute;
     bottom: 2.5rem;
@@ -231,6 +230,8 @@ section{
 }
 
 
+
+
 /*Sección About*/
 
 .about__container{    
@@ -253,6 +254,125 @@ section{
 .about__paragraph{
     font-size: 1.6rem;
 }
+
+
+
+/*Sección Skills*/
+.skills{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.skills__title{
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+}
+
+.skills__container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 4rem;
+}
+
+.skills__line{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+}
+
+.skills__card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;  
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);  
+}
+
+.skills__card:hover{
+    border-radius: 1rem solid;
+    transform: scale(1.05); 
+}
+
+.skills__img{
+    font-size: 7rem;
+    transition: 0.4s ease;
+}
+
+.skills__img:hover{
+    color: aqua;
+}
+
+.skills__name{
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+
+/*Sección Hobbies*/
+
+.hobbies{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.hobbies__title{
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+}
+
+.hobbies__line{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 3rem;
+}
+
+.hobbies__card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;  
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);  
+}
+
+.hobbies__card:hover{
+    border-radius: 1rem solid;
+    transform: scale(1.05); 
+}
+
+.hobbies__img{
+    font-size: 7rem;
+    transition: 0.4s ease;
+    display: flex;
+    justify-content: center;
+}
+
+.hobbies__img:hover{
+    color: aqua;
+}
+
+.hobbies__name{
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width: 480px) {
