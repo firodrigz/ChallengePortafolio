@@ -26,6 +26,8 @@
 -FUNCIONAMIENTO DE CV
 -DRARKMODE
 */
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -224,6 +226,10 @@ section{
 
 /* Efecto cortina */
 
+.home__sci__item:hover{    
+    color: #081B29;
+}
+
 .home__sci__item::before{
     content: '';
     position: absolute;
@@ -231,7 +237,7 @@ section{
     left: 0;
     width: 100%;
     height: 0;
-    background: red;
+    background: #00ABF0;
     z-index: -1;
     transition: .5s; 
 }
