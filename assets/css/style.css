@@ -14,18 +14,18 @@
     --color-border-input: rgb(200, 200, 200);
     --color-warning: rgb(215, 16, 16);
     --color-valid: rgb(79, 183, 55);
-
-   /* --color-letra:
-      --color-outline:
-
-
-
-      darkmode:
-
-    */  
-
-   --fuente: 'Poppins', sans-serif;
+    --fuente: 'Poppins', sans-serif;
 }
+
+
+/* TO DO:
+-FORMALIZAR TAM FUENTE
+-RESPONSIVE
+-TRANSICIÓN
+-USAR VARIABLES DE COLOR /ELEGIR PALETA DE COLORES
+-FUNCIONAMIENTO DE CV
+-DRARKMODE
+*/
 
 
 body{
@@ -41,8 +41,6 @@ section{
 
 
 /*Sección Menu*/
-
-/*No funciona: transiciones */
 
 .menu__header{ 
     background: rgba(0, 0, 0, 0.9); /*poner variable color */
@@ -568,6 +566,10 @@ section{
   transition: 200ms;
 }
 
+@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 992px) {}
+@media screen and (max-width: 767px) {}
+@media screen and (max-width: 620px) {}
 @media screen and (max-width: 480px) {
    
     #menu__button{
@@ -575,8 +577,6 @@ section{
         cursor: pointer;  
     }
     
-    /*TODO transición */
-
     .menu__header__nav{
         width: 100%;
         position: absolute;
