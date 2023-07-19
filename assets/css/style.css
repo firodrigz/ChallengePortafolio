@@ -1,7 +1,19 @@
 :root{
    
     --background: #0B141E;
-   --color-leta-blnc: #FFFFFF;
+    --color-leta-blnc: #FFFFFF;
+    --color-texto: rgb(70, 70, 70);
+    --color-texto-hover: rgb(0, 0, 0);
+    --color-fondo: rgb(245, 245, 245);
+    --color-fondo-hover: rgb(221, 221, 221);
+    --color-fondo-section: rgb(234, 242, 253);
+    --color-white: rgb(255, 255, 255);
+    --color-blue: rgb(42, 122, 228);
+    --color-blue-hover: rgb(24 100 201);
+    --color-label: rgb(162, 162, 162);
+    --color-border-input: rgb(200, 200, 200);
+    --color-warning: rgb(215, 16, 16);
+    --color-valid: rgb(79, 183, 55);
 
    /* --color-letra:
       --color-outline:
@@ -14,6 +26,7 @@
 
    --fuente: 'Poppins', sans-serif;
 }
+
 
 body{
     background-color: var(--background) ;
@@ -79,7 +92,8 @@ section{
 .home{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    width: 100%;
     /*background: linear-gradient(-90deg, var(--background) 65%, var(--color-leta-blnc) 35% );*/
 }
 
@@ -102,10 +116,11 @@ section{
 
 .home__content{
     max-width: 37.5rem;
+    margin-left: 5rem;
 }
 
 .title__bio{
-    font-size: 3.5rem;
+    font-size: 5rem;
     font-weight: 700;
     line-height: 1.2;
 }
@@ -114,21 +129,17 @@ section{
     font-size: 2rem;
     font-weight: 700;
     color: #00ABF0;
+    margin: 1.25rem 0 3.5rem;
 }
 
-.home__content p{
-    font-size: 1rem;
-    margin: 1.25rem 0 2.5rem;
-}
-
-.home__btn__box{
+.home__btn__box, .experience__container-enlace, .contacto__btn{
     display: flex;
     justify-content: space-between;
     width: 21.5625rem;
     height: 3.125rem;
 }
 
-.home__btn__item{
+.home__btn__item, .experience__enlace, .contacto__btn__submit{
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -147,28 +158,28 @@ section{
     transition: .5s;
 }
 
-.home__btn__item:hover{
+.home__btn__item:hover, .experience__enlace:hover, .contacto__btn__submit:hover{
     color: #00ABF0;
 }
 
 /* cambia 2do botón */
 
-.home__btn__item:nth-child(2){
+.home__btn__item:nth-child(2), .experience__enlace:nth-child(2){
     background: transparent;
     color: #00ABF0;
 }
 
-.home__btn__item:nth-child(2):hover{
+.home__btn__item:nth-child(2):hover, .experience__enlace:nth-child(2):hover{
     color: #081B29;
 }
 
-.home__btn__item:nth-child(2)::before{
+.home__btn__item:nth-child(2)::before, .experience__enlace:nth-child(2)::before{
     background: #00ABF0;
 }
 
 /* Efecto cortina */
 
-.home__btn__item::before{
+.home__btn__item::before, .experience__enlace::before, .contacto__btn__submit::before{
     content: '';
     position: absolute;
     top: 0;
@@ -181,7 +192,7 @@ section{
 }
 
 
-.home__btn__item:hover::before{
+.home__btn__item:hover::before, .experience__enlace:hover::before, .contacto__btn__submit:hover::before{
     width: 100%;
 }
 
@@ -230,8 +241,6 @@ section{
 }
 
 
-
-
 /*Sección About*/
 
 .about__container{    
@@ -242,7 +251,7 @@ section{
     gap: 3rem;
 }
 
-.about__title{
+.about__title, .skills__title, .hobbies__title, .academic__title, .experience__title, .contacto__title{
     font-size: 3.2rem;
     margin-bottom: 2rem;
 }
@@ -258,7 +267,7 @@ section{
 
 
 /*Sección Skills*/
-.skills{
+.hobbies, .skills, .academic, .experience, .contacto{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -266,24 +275,14 @@ section{
     gap: 3rem;
 }
 
-.skills__title{
-    font-size: 3.2rem;
-    margin-bottom: 2rem;
-}
-
-.skills__container{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 4rem;
-}
-
 .skills__line{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 3rem;
+    width: 100%;
 }
 
-.skills__card{
+.skills__card, .hobbies__card, .academic__box{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -292,7 +291,7 @@ section{
     transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);  
 }
 
-.skills__card:hover{
+.skills__card:hover, .hobbies__card:hover, .academic__box:hover{
     border-radius: 1rem solid;
     transform: scale(1.05); 
 }
@@ -302,49 +301,22 @@ section{
     transition: 0.4s ease;
 }
 
-.skills__img:hover{
+.skills__img:hover, .hobbies__img:hover{
     color: aqua;
 }
 
-.skills__name{
+.skills__name, .hobbies__name{
     font-size: 2rem;
     font-weight: 200;
 }
 
 
 /*Sección Hobbies*/
-
-.hobbies{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 3rem;
-}
-
-.hobbies__title{
-    font-size: 3.2rem;
-    margin-bottom: 2rem;
-}
-
 .hobbies__line{
     display: grid;
     grid-template-columns: repeat(5,1fr);
     gap: 3rem;
-}
-
-.hobbies__card{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    cursor: pointer;  
-    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);  
-}
-
-.hobbies__card:hover{
-    border-radius: 1rem solid;
-    transform: scale(1.05); 
+    width: 100%;
 }
 
 .hobbies__img{
@@ -354,26 +326,44 @@ section{
     justify-content: center;
 }
 
-.hobbies__img:hover{
-    color: aqua;
-}
+/* Académica */
 
-.hobbies__name{
+.academic__container{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+  }
+  
+  .academic__box {
+    min-width: 20rem;
+    max-width: 25rem;    
+    gap: 3rem;
+    width: 100%;
+  }
+  
+  .academic__figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+  }
+  
+  .academic__container-text{
+    text-align: center;
+  }
+  
+  .academic__text--title{
     font-size: 2rem;
     font-weight: 200;
-}
-
-
-
-
-
-
-
-
-
-
-
-
+    min-height: 7rem;    
+  }
+  
+  .academic__text--inst {
+    margin-top: 0.8rem;
+  }
+  
+  
 
 @media screen and (max-width: 480px) {
    
@@ -413,3 +403,32 @@ section{
     }
 
 }
+
+
+
+
+
+/*
+
+.copyright {
+      font-size: 1.5vw;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+////////////////////////////////////////
+  .copyright {
+    flex-direction: column;
+    padding-top: 2rem;
+    font-size: 2vw;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contact {
+    padding-bottom: 1rem;
+  }
+  .icono {
+    font-size: 1.5rem;
+  }
+  */
