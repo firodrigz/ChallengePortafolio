@@ -1,30 +1,21 @@
-:root{
-   
+:root{   
     --background: #0B141E;
-    --color-leta-blnc: #FFFFFF;
-    --color-texto: rgb(70, 70, 70);
-    --color-texto-hover: rgb(0, 0, 0);
-    --color-fondo: rgb(245, 245, 245);
-    --color-fondo-hover: rgb(221, 221, 221);
-    --color-fondo-section: rgb(234, 242, 253);
-    --color-white: rgb(255, 255, 255);
-    --color-blue: rgb(42, 122, 228);
-    --color-blue-hover: rgb(24 100 201);
-    --color-label: rgb(162, 162, 162);
-    --color-border-input: rgb(200, 200, 200);
-    --color-warning: rgb(215, 16, 16);
-    --color-valid: rgb(79, 183, 55);
+    --background-header: #000000e6;
+    --color-letra-blnc: #FFFFFF;
+    --color-contraste: #00ABF0;
+    --color-sec-cortina: #081B29;
+    --color-blue: #2A7AE4;
+    --color-label: #A2A2A2;
+    --color-border-input: #C8C8C8;
+    --color-warning: #D71010;
+    --color-valid: #4FB737;
     --fuente: 'Poppins', sans-serif;
 }
 
-
 /* TO DO:
--FORMALIZAR TAM FUENTE
--USAR VARIABLES DE COLOR /ELEGIR PALETA DE COLORES
--FUNCIONAMIENTO DE CV
+-ELEGIR PALETA DE COLORES
 -DRARKMODE
 */
-
 
 html {
     scroll-behavior: smooth;
@@ -33,7 +24,7 @@ html {
 body{
     background-color: var(--background) ;
     font-family: var(--fuente);
-    color: var(--color-leta-blnc) ;
+    color: var(--color-letra-blnc) ;
 }
 
 section{
@@ -45,7 +36,7 @@ section{
 /*Sección Menu*/
 
 .menu__header{ 
-    background: rgba(0, 0, 0, 0.9); /*poner variable color */
+    background: var(--background-header);
     position: fixed;
     top: 0;
     left: 0;
@@ -60,7 +51,7 @@ section{
 .menu__title{    
     font-size: 2.2rem;
     font-weight: 600;
-    color: aqua
+    color: var(--color-contraste);
 }
 
 
@@ -83,7 +74,7 @@ section{
 }
 
 .menu__list__item a:hover{
-    color: aqua;
+    color: var(--color-contraste);
 }
 
 
@@ -93,8 +84,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 100%;
-    /*background: linear-gradient(-90deg, var(--background) 65%, var(--color-leta-blnc) 35% );*/
+    width: 100%;    
 }
 
 
@@ -104,12 +94,12 @@ section{
     align-items: center;
     width: 500px;
     height: 500px;
-    background-color: aqua;
+    background-color: var(--color-contraste);
     border-radius: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    border: 25px solid #FFFFFF;
+    border: 25px solid var(--color-letra-blnc);
     background-image: url('../img/profile.jpg');
 }
 
@@ -129,7 +119,7 @@ section{
 .title__subsection{
     font-size: 2rem;
     font-weight: 700;
-    color: #00ABF0;
+    color: var(--color-contraste);
     margin: 1.25rem 0 3.5rem;
 }
 
@@ -147,11 +137,11 @@ section{
     justify-content: center;
     width: 9.375rem;
     height: 100%;
-    background: #00ABF0;
-    border: 2px solid #00ABF0;
+    background: var(--color-contraste);
+    border: 2px solid var(--color-contraste);
     border-radius: 8px;
     font-size: 1.1875rem;
-    color: #0B141E;
+    color: var(--background);
     font-weight: 600;
     letter-spacing: 1px;
     z-index: 1;
@@ -160,22 +150,22 @@ section{
 }
 
 .home__btn__item:hover, .experience__enlace:hover, .contacto__btn__submit:hover{
-    color: #00ABF0;
+    color: var(--color-contraste);
 }
 
 /* cambia 2do botón */
 
 .home__btn__item:nth-child(2), .experience__enlace:nth-child(2){
     background: transparent;
-    color: #00ABF0;
+    color: var(--color-contraste);
 }
 
 .home__btn__item:nth-child(2):hover, .experience__enlace:nth-child(2):hover{
-    color: #081B29;
+    color: var(--color-sec-cortina);
 }
 
 .home__btn__item:nth-child(2)::before, .experience__enlace:nth-child(2)::before{
-    background: #00ABF0;
+    background: var(--color-contraste);
 }
 
 /* Efecto cortina */
@@ -187,7 +177,7 @@ section{
     left: 0;
     width: 0;
     height: 100%;
-    background: #081B29;
+    background: var(--color-sec-cortina);
     z-index: -1;
     transition: .5s;
 }
@@ -215,10 +205,10 @@ section{
     width: 2.5rem;
     height: 2.5rem;
     background: transparent;
-    border: 2px solid #00ABF0;
+    border: 2px solid var(--color-contraste);
     border-radius: 50%;
     font-size: 1.25rem;
-    color: #00ABF0;
+    color: var(--color-contraste);
     z-index: 1;
     overflow: hidden;
 }
@@ -226,7 +216,7 @@ section{
 /* Efecto cortina */
 
 .home__sci__item:hover{    
-    color: #081B29;
+    color: var(--color-sec-cortina);
 }
 
 .home__sci__item::before{
@@ -236,7 +226,7 @@ section{
     left: 0;
     width: 100%;
     height: 0;
-    background: #00ABF0;
+    background: var(--color-contraste);
     z-index: -1;
     transition: .5s; 
 }
@@ -263,7 +253,7 @@ section{
 }
 
 .about__title span{
-    color: aqua;
+    color: var(--color-contraste);
 }
 
 .about__paragraph{
@@ -308,7 +298,7 @@ section{
 }
 
 .skills__img:hover, .hobbies__img:hover{
-    color: aqua;
+    color: var(--color-contraste);
 }
 
 .skills__name, .hobbies__name{
@@ -458,7 +448,7 @@ section{
     padding: 3.7rem 1.2rem 1.2rem;
     height: 5.6rem;
     width: 100%;
-    background-color: var(--color-white);
+    background-color: var(--color-letra-blnc);
     border-radius: 0.4rem;
     border: none;
     border-bottom: 2px solid var(--color-border-input);
@@ -566,13 +556,12 @@ section{
 
 .footer__icono {
   font-size: 2rem;
-  color: var(--dark-blue-300);
   padding: 1rem;
   cursor: pointer;
 }
 
 .footer__icono:hover {
-  color: #3498db;
+  color: var(--color-contraste);
   transition: 200ms;
 }
 
@@ -709,7 +698,7 @@ section{
         position: absolute;
         top: 100%;
         left: 0;
-        background: rgba(0, 0, 0, 0.9);
+        background: var(--background-header);
         display: none;
         pointer-events: none;
     }
