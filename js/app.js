@@ -1,3 +1,15 @@
+import { valida } from "./validaciones.js";
+
+const inputs = document.querySelectorAll(".data");
+
+inputs.forEach((input) => {
+    input.addEventListener("blur", (input) => {
+        valida(input.target);
+    });
+});
+
+
+
 /* Menu desplegable */
 
 const button = document.querySelector('#menu__button');

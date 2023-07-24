@@ -256,7 +256,7 @@
                 </div>
                 <form class="contacto__form" name="form">
                     <div class="contacto__input-wrapper">
-                        <input class="contacto__input data" type="text" name="nombre" id="nombre" data-tipo="nombre"
+                        <input class="contacto__input data" type="text" name="nombre" id="nombre" maxlength="50" data-tipo="nombre"
                             required>
                         <label class="contacto__label" for="nombre">Nombre</label>
                         <span class="input-message-error">Este campo no es válido</span>
@@ -268,13 +268,13 @@
                         <span class="input-message-error">Este campo no es válido</span>
                     </div>
                     <div class="contacto__input-wrapper">
-                        <input class="contacto__input data" type="text" name="asunto" id="asunto" data-tipo="asunto"
+                        <input class="contacto__input data" type="text" name="asunto" id="asunto" maxlength="50" data-tipo="asunto"
                             required>
                         <label class="contacto__label" for="asunto">Asunto</label>
                         <span class="input-message-error">Este campo no es válido</span>
                     </div>
                     <div class="contacto__input-wrapper">
-                        <textarea class="contacto__textarea data" name="mensaje" id="mensaje" data-tipo="mensaje"
+                        <textarea class="contacto__textarea data" name="mensaje" id="mensaje" maxlength="300" data-tipo="mensaje"
                             required></textarea>
                         <label class="contacto__label-textarea" for="mensaje">Mensaje</label>
                         <span class="input-message-error">Este campo no es válido</span>
@@ -296,7 +296,6 @@
         </div>
     </footer>
  <!-- Script del documento JavaScript -->
-    <script src="menu.js"></script>
-    <script src="validacion.js"></script>
+    <script src="./js/app.js" type="module"></script>
 </body>
 </html>
