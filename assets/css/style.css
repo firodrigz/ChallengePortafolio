@@ -144,7 +144,7 @@ section{
     color: var(--background);
     font-weight: 600;
     letter-spacing: 1px;
-    z-index: 1;
+    z-index: 0;
     overflow: hidden;
     transition: .5s;
 }
@@ -209,7 +209,7 @@ section{
     border-radius: 50%;
     font-size: 1.25rem;
     color: var(--color-contraste);
-    z-index: 1;
+    z-index: 0;
     overflow: hidden;
 }
 
