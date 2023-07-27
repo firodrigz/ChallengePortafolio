@@ -12,10 +12,6 @@
     --fuente: 'Poppins', sans-serif;
 }
 
-/* TO DO:
--ELEGIR PALETA DE COLORES
--DRARKMODE
-*/
 
 html {
     scroll-behavior: smooth;
@@ -79,6 +75,12 @@ section{
 
 
 /*Sección Home*/
+.home__contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
 
 .home{
     display: flex;
@@ -190,8 +192,6 @@ section{
 /*        */
 
 .home__sci{
-    position: absolute;
-    bottom: 2.5rem;
     width: 9rem;
     display: flex;
     justify-content: space-evenly;
@@ -763,7 +763,16 @@ section{
     }
 
     .home__content{
-        margin-left: 0;
+        margin-left: unset;
+        width: 100%;
+    }
+
+    .title__bio, .title__subsection{
+        text-align: center;
+    }    
+
+    .home__btn__box{
+        justify-content: space-around;
     }
    
     .skills__line{
